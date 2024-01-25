@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/Images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Chinmay Mhatre</title>
+</head>
+<body>
+    <h2 style="text-align: center; text-transform: uppercase; background-color: #ff4d5a;">Portfolio under Development, Deploying Soon...</h2>
+    <nav class="navbar flexRow">
+        <div class="flexRow" style="width: 100%;">
+            <h1 class="p-10">LOGO</h1>
+            <ul class="alignRight flexRow AddSkill_Btn">
+                <li><a href="/">Home</a></li>
+                <li><a href="#aboutSec">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="toggle-button" onclick="toggleNavbar()">&#9776;</div>
+    </nav>
+
+    <!-- Modal Code is here... -->
+    <div id="myModal" class="modal">
+        <form class="modal-content" id="addSkillForm">
+          <span class="close-btn" id="closeModalBtn">&times;</span>
+          <h2>Add Skill</h2>
+      
+          <div class="form-group">
+            <label for="skillName">Skill Name:</label>
+            <input type="text" id="skillName" name="skillName" placeholder="Enter Skill Name" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+          </div>
+      
+          <div class="preview" id="previewContainer" style="display: none;">
+            <label>Preview:</label><br>
+            <img id="imagePreview" alt="Image Preview">
+          </div>
+          <button id="submitBtn">Submit</button>
+        </form>
+      </div>
+    <!-- Modal Code is ends here... -->
+
+    <div class="container">
+        <section class="main_box main_intro" id="particles-js">
+                <div class="description">
+                    <h1>Hi There,</h1>
+                    <h1>I'm <span class="span">Chinmay Mhatre</span></h1>
+                    <span id="element"></span><br>
+                    <button class="btn" onclick="window.location.replace(`#aboutSec`)">About Me -></button>
+                    <div class="icons">
+                        
+                    </div>
+                </div>
+                <div class="photo"><img id="hero" src="Images/chinmayProfileCrop.PNG" alt="profilePic"></div>
+        </section>
+    <section class="about" id="aboutSec">
+        <h1 class="headers"><i class="fa-solid fa-user"></i> About Me</h1>
+        <div class="main_box flexRow">
+            <div id="aboutme">
+                <p><h1 class="span">Welcome to my website!</h1></p>
+                <p>Hello there! I'm thrilled to have you visit my website. I'm a passionate and dedicated <span class="underline">Computer Engineering</span> Third year student at <span class="underline">Vidylankar Institute of Technology</span>, and this platform is designed to showcase my journey,projects, and skills.</p>
+                    <br><h1 class="span">Who am I?</h1>
+                <p>I'm a curious soul with a deep love for all tech-related things.As a Computer Engineering student, I find joy in unraveling complex problems and creating innovative solutions. And this appetite keeps me hungry for learning.</p>
+                <button class="btn" id="resBtn" onclick="window.open(`https://drive.google.com/file/d/1tZIoYTaKtPIL3o2Zn32OxZXf-Vfq1XD5/view?usp=sharing`)";>Resume</button>
+            </div>
+                <div class="skills AddSkill_Btn" id="AllSkills">
+                    
+                </div>
+        </div>
+    </section>
+    <!-- Project Section Begins(#e5ecfb) -->
+    <section class="projects">
+        <h1 class="headers" style="text-align: center; font-family: 'Belanosima', sans-serif; color: black;"><i class="fa-solid fa-house-laptop"></i> My Projects</h1>
+        <p class="subtitle">"Comments Sometimes lies, but Code Never"</p>
+        <div class="projects_row flexRow">
+            <div class="project_box card">
+                <img src="Images/quatationMaker.png" class="projectImg" alt="">
+                <div class="intro skills_row"> <!-- skills_row => flexCol -->
+                    <div class="tag">
+                        <h1>Quotation Maker</h1>
+                    </div>
+                    <div class="desc">
+                        <p>The Website was created for Health Insurance Advisors so that they can easily Calculate the Premium and send it to User with Ease. The Technologies used for Frontend in this Website are HTML+CSS+JS and that for Backend MongoDb and Express. Library used to share the edited Quotation Pdf-file was PDF-LIB.</p>
+                        <div class="flexRow buttons">
+                            <button class="btn">View</button>
+                            <button class="btn">Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project_box card">
+                <img src="Images//danceAcademy.png" class="projectImg" alt="">
+                <div class="intro skills_row"> <!-- skills_row => flexCol -->
+                    <div class="tag">
+                        <h1>Dance Academy Website</h1>
+                    </div>
+                    <div class="desc">
+                        <p>This is a Website for Dance Academy. Created Frontend using HTML+CSS+JS and Backend using MongoDB for storing Information given by user.</p>
+                        <div class="flexRow buttons">
+                            <button class="btn">View</button>
+                            <button class="btn">Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project_box card">
+                <img src="Images/keepNotesWeb.png" class="projectImg" alt="">
+                <div class="intro skills_row"> <!-- skills_row => flexCol -->
+                    <div class="tag">
+                        <h1>keepNotes</h1>
+                    </div>
+                    <div class="desc">
+                        <p>FrontEnd of Notetaking Web Application Built Using HTML+CSS+JS for seamless note-taking and task management With the help of Local Storage of Developer Tools.</p>
+                        <div class="flexRow buttons">
+                            <button class="btn">View</button>
+                            <button class="btn">Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <button class="viewMore flexRow">View More</button>
+    </section>
+
+    <section class="form">
+        <h1 class="headers" style="text-align: center; font-family: 'Belanosima', sans-serif; color: black;"><i class="fa-solid fa-phone"></i> Get in Touch</h1>
+        <p class="subtitle">Have any Questions ? Leave your details and I'll get back to you as soon as possible.</p>
+        <div class="form_container">
+            <div class="description">
+                <img src="Images/helpline.jpg" alt="ContactUs">
+            </div>
+            <div class="main_form skills_row">
+                <div class="input flexRow">
+                    <i class="fa-solid fa-user m_10"></i>
+                    <input type="text" name="name" id="" placeholder="Name"/>
+                </div>
+                <div class="input flexRow">
+                    <i class="fa-solid fa-envelope-open-text m_10"></i>
+                    <input type="email" name="email" id="" placeholder="Email Address"/>
+                </div>
+                <div class="input flexRow">
+                    <i class="fa-solid fa-message m_10"></i>
+                    <textarea name="msg" id="" cols="50" rows="10" placeholder="Message"></textarea>
+                </div>
+                <button class="viewMore" type="submit">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <i class="fa-brands fa-linkedin" style="color: #356be9;"></i>
+        <div class="tail">
+            <hr style="color: white; margin: auto 20px;">
+            <h2 class="about">Designed with ❤️ by Chinmay Mhatre</h2>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src="particles.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="myjs.js"></script>
+<script src="index.js"></script>
+</html>
