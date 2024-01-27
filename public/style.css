@@ -76,14 +76,14 @@
     padding: 10px;
   }
 
-  a:hover::after {
+  /* a:hover::after {
     content: "";
     position: absolute;
     left: 25%;
     right: 25%;
     bottom: 0;
     border: 1px solid black;
-  }
+  } */
 
   .toggle-button {
     display: none;
@@ -104,6 +104,10 @@
   }
   .social-icons li:hover{
     background-color: white;
+    
+  }
+  .social-icons a{
+    text-decoration: none !important;
     
   }
 
