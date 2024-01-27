@@ -20,7 +20,7 @@ app.use(express.static(path.join(process.cwd(), 'public')));
 
 // handling ejs specific stuff
 app.set('view engine', 'ejs');
-// app.set('views', './views')
+app.set('views', './views')
 
 app.use('/', routes);
 

@@ -1,5 +1,5 @@
 const homeController = (req, res) =>{
-    res.render('index')
+    res.render('index.ejs')
 }
 
 
