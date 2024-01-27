@@ -1,9 +1,9 @@
 
-// var typed = new Typed('#element', {
-//     strings: [`I'm into Development...`, 'I Build Websites','I Solve Problems'],
-//     typeSpeed: 60,
-//     loop: true,
-//   });
+var typed = new Typed('#element', {
+    strings: [`I'm into Development...`, 'I Build Websites','I Solve Problems'],
+    typeSpeed: 60,
+    loop: true,
+  });
 
 function toggleNavbar() {
   var navLinks = document.querySelector('.alignRight');
@@ -215,7 +215,7 @@ form.addEventListener('submit', async (event) => {
   formData.append('image', imageInput.files[0]);
 
   try {
-    const response = await fetch(`http://localhost:3300/${SELECTED_MODAL == 'Skill' ? "addskill" : "addproject"}`, {
+    const response = await fetch(`/${SELECTED_MODAL == 'Skill' ? "addskill" : "addproject"}`, {
       method: 'POST',
       body: formData,
     });
