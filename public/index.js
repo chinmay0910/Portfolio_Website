@@ -12,7 +12,7 @@ function toggleNavbar() {
 
 
 // Trying to fetch all the Skills and show it in skills Section
-fetch('http://localhost:3300/viewSkills')
+fetch('/viewSkills')
   .then(response => response.json())
   .then(data => {
     // Update the DOM with the fetched data
@@ -37,7 +37,7 @@ fetch('http://localhost:3300/viewSkills')
   })
   .catch(error => console.error('Error fetching data:', error.message));
 
-fetch('http://localhost:3300/Viewprojects')
+fetch('/Viewprojects')
   .then(response => response.json())
   .then(data => {
     // Update the DOM with the fetched data
