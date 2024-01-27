@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/Images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Chinmay Mhatre</title>
+</head>
+<body>
+    <h2 style="text-align: center; text-transform: uppercase; background-color: #ff4d5a;">Portfolio under Development, Deploying Soon...</h2>
+    <%- include('./partials/navbar.ejs'); %>
+
+    <section class="projects">
+        <h1 class="headers" style="text-align: center; font-family: 'Belanosima', sans-serif; color: black;"><i class="fa-solid fa-house-laptop"></i> My Projects</h1>
+        <div class="projects_row flexRow">
+            <!-- All the projects will be appended here after fetching from DB         -->
+            <%if(projects != null){%> 
+
+                <% projects.forEach(project=>{%>
+                    <div class="project_box card">
+                        <img src=<%=`${project.ImgLink}`%> class="projectImg" alt="">
+                        <div class="intro skills_row"> <!-- skills_row => flexCol -->
+                            <div class="tag">
+                                <h1><%=`${project.projectTitle}`%></h1>
+                            </div>
+                            <div class="desc">
+                                <p><%=project.projectDescription%></p>
+                                <div class="flexRow buttons">
+                                    <a target="_blank" href=<%=`${project.projectLink}`%> ><button class="btn">View</button></a>
+                                    <a target="_blank" href=<%=`${project.projectCodeLink}`%> ><button class="btn">Code</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <%})%>
+            <%}%>
+        </div>
+    </section>
+
+    <footer>
+        <i class="fa-brands fa-linkedin" style="color: #356be9;"></i>
+        <div class="tail">
+            <hr style="color: white; margin: auto 20px;">
+            <h2 class="about">Designed with ❤️ by Chinmay Mhatre</h2>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

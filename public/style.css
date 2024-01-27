@@ -69,7 +69,7 @@
     margin-right: 15px;
   }
 
-  a {
+  .a_underline{
     text-decoration: none;
     color: rgb(2, 2, 66);
     position: relative;
@@ -89,6 +89,30 @@
     display: none;
     cursor: pointer;
     color: rgb(2, 2, 66);
+  }
+  
+  .social-icons{
+    margin-top: 20px;
+  }
+
+  .social-icons li{
+    padding: 15px;
+    background-color: gainsboro;
+    border-radius: 50%;
+    margin: 20px;
+    transition: ease 0.4s;
+  }
+  .social-icons li:hover{
+    background-color: white;
+    
+  }
+
+  .footer_social_icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
   }
 
   @media only screen and (min-width: 651px) {
@@ -172,6 +196,7 @@
     color: white;
     border-radius: 10px;
     padding: 0px 10px;
+    margin: 0px 5px;
 }
 
 #submitBtn:hover{
@@ -247,11 +272,21 @@
   }
 
   input[type="text"],
-  input[type="file"] {
+  input[type="file"],
+  textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
+    resize: none;
     box-sizing: border-box;
+    border: 1px solid gray;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  input[type="file"]{
+    border: none;
   }
 
   .preview {
@@ -313,6 +348,12 @@ canvas {position: absolute; top: 0; left: 0;}
 
 .about{
     background-color: rgb(0, 0, 26);
+    font-family: 'Belanosima', sans-serif;
+    color: white;
+    text-align: center;
+}
+footer .about{
+    background-color: transparent;
     font-family: 'Belanosima', sans-serif;
     color: white;
     text-align: center;
@@ -553,7 +594,7 @@ canvas {position: absolute; top: 0; left: 0;}
 }
 
 /* Footer Css Starts here... */
-footer{height: 100px; background-color: rgb(0, 0, 55);}
+footer{height: fit-content; background-color: rgb(0, 0, 55);}
 
 .underline{text-decoration: underline; text-decoration-color:gold;}
 
