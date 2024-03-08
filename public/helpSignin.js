@@ -11,10 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const Email = document.getElementById("Email").value;
         const password = document.getElementById("password").value;
 
-        // Log values in the console
-        console.log("Email:", Email);
-        console.log("Password:", password);
-
         try {
             // Make fetch request to endpoint
             const response = await fetch('/login', {
@@ -26,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             const responseData = await response.json();
-            console.log(responseData); // Log response data from fetch request
+            // console.log(responseData); // Log response data from fetch request
             if(responseData.success){
                 // redirect
                 localStorage.setItem('Auth-token', responseData.authtoken);
