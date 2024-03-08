@@ -397,6 +397,7 @@ footer .about{
 
 #aboutme .span{
     font-size: 24px;
+    letter-spacing: 3px;
 }
 
 #aboutme{
@@ -406,7 +407,7 @@ footer .about{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     flex-wrap: wrap;
 }
 
