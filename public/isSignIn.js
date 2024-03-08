@@ -39,8 +39,17 @@ checkIfuserIsSignin().then((signedIn) => {
     AddProject_Btn.setAttribute('onClick', "openModal('Add Project')")
     AddProject_Btn.textContent = 'Add Project';
 
+    const Logout_Btn = document.createElement("button");
+    Logout_Btn.setAttribute('onClick', "logout()")
+    Logout_Btn.textContent = 'Logout';
+
     skillList.appendChild(AddSkill_Btn);
     skillList.appendChild(AddProject_Btn);
+    skillList.appendChild(Logout_Btn);
   }
 });
   
+const logout = ()=> {
+  localStorage.clear('Auth-token')
+  window.location.href = "/"
+}
